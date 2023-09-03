@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>食材清单</title>
+</head>
+<body>
+    <h2>所有素材</h2>
+    <hr>
+    <ul>
+        {% for entity in info  %}
+            <li>
+                <a href="{% url 'api:brief' entity.id %}">
+                   {{ entity.material_name }} || {{ entity.material_region }} || {{ entity.material_feature }}
+                </a>
+
+            </li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
