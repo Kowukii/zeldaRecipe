@@ -16,6 +16,11 @@ from rest_framework import serializers
 
 class DataSerializer(serializers.Serializer):
     data = serializers.ListField(child=serializers.IntegerField())
+    board = serializers.ListField()
+    index = serializers.IntegerField()
 
 class ImageSerializer(serializers.Serializer):
-    image_paths = serializers.CharField()
+    image_path = serializers.CharField()
+    board = serializers.ListField()
+    recipes = serializers.ListField()
+

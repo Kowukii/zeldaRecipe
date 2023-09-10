@@ -51,12 +51,15 @@ class ListOfEffect(models.Model):
 class Recipe(models.Model):
     dish_id = models.IntegerField(default=0,primary_key=True)
     name_cn = models.CharField(verbose_name="cn名称", max_length=16)
+    name_en = models.CharField(verbose_name="en名称", max_length=64, default='')
     dish_info = models.CharField(verbose_name="简介", max_length=1024, null=True)
+    dish_info_en = models.CharField(verbose_name="en简介", max_length=1024, null=True)
+    para = models.CharField(verbose_name="加成", max_length=32, default='')
     ingre1 = models.CharField(verbose_name="原料1", max_length=32, null=True)
     ingre2 = models.CharField(verbose_name="原料2", max_length=32, null=True)
     ingre3 = models.CharField(verbose_name="原料3", max_length=32, null=True)
     ingre4 = models.CharField(verbose_name="原料4", max_length=32, null=True)
-
+    img_path = models.CharField(verbose_name="img路径", max_length=64, default='')
 
 
 class Material(models.Model):

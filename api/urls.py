@@ -18,8 +18,8 @@ urlpatterns = [
     path('special/', bank.SpecialView.as_view()),
     path('insect/', bank.InsectView.as_view()),
     path('bad/', bank.BadView.as_view()),
-
     path('image/', DataSubmitView.as_view({
         'post': 'create'
     })),
+    path('recipe/', RecipeCheckView.as_view()),
 ]
